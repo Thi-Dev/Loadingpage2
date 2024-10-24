@@ -1,0 +1,67 @@
+/* Reset the page's default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f39c12;
+    position: absolute;
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+  
+  .circle:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 0s;
+  }
+  
+  .circle:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    animation-delay: 0.3s;
+  }
+  
+  .circle:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 0.6s;
+  }
+  
+  .circle:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation-delay: 0.9s;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
